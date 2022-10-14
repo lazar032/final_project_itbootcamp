@@ -63,8 +63,8 @@ public class SignupTests {
     @Test(priority = 40)
     public void signup() {
         basicTest.navPage.getSignUpButton().click();
-        basicTest.signupPage.getNameInput().sendKeys("Ilija Nestorovic");
-        basicTest.signupPage.getEmailInput().sendKeys("ilija.nestorovic@itbootcamp.rs");
+        basicTest.signupPage.getNameInput().sendKeys("Lazar Mitrovic");
+        basicTest.signupPage.getEmailInput().sendKeys("lazar.mitrovic@itbootcamp.rs");
         basicTest.signupPage.getPasswordInput().sendKeys("12345");
         basicTest.signupPage.getConfirmPasswordInput().sendKeys("12345");
         basicTest.signupPage.getSignupButton().click();

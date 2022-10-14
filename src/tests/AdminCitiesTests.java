@@ -99,7 +99,7 @@ public class AdminCitiesTests {
     public void deleteCity() {
         basicTest.navPage.getAdminButton().click();
         basicTest.navPage.getCitiesDropDownLink().click();
-        basicTest.citiesPage.getSearchInput().sendKeys("Ilija Nestorovic's city Edited");
+        basicTest.citiesPage.getSearchInput().sendKeys("Lazar Mitrovic's city Edited");
         basicTest.citiesPage.waitForNumberOfRows(1);
         String actualResult = basicTest.citiesPage.getTableCell(1, 2).getText();
         String expectedResult = basicTest.citiesPage.getSearchInput().getAttribute("value");
