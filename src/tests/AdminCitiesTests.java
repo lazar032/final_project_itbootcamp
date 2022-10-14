@@ -59,7 +59,7 @@ public class AdminCitiesTests {
         basicTest.navPage.getCitiesDropDownLink().click();
         basicTest.citiesPage.getNewItemButton().click();
         basicTest.citiesPage.waitForEditNewDialog();
-        basicTest.citiesPage.getNameInput().sendKeys("Ilija Nestorovic's city");
+        basicTest.citiesPage.getNameInput().sendKeys("Lazar Mitrovic's city");
         basicTest.citiesPage.getSaveButton().click();
         wait.until(webDriver -> basicTest.messagePopUpPage.successDialog().isDisplayed());
         String actualResult = basicTest.messagePopUpPage.getTextFromUserError();
@@ -72,13 +72,13 @@ public class AdminCitiesTests {
     public void editCity() {
         basicTest.navPage.getAdminButton().click();
         basicTest.navPage.getCitiesDropDownLink().click();
-        basicTest.citiesPage.getSearchInput().sendKeys("Ilija Nestorovic's city");
+        basicTest.citiesPage.getSearchInput().sendKeys("Lazar Mitrovic's city");
         basicTest.citiesPage.waitForNumberOfRows(1);
         basicTest.citiesPage.getRowEditButton(1).click();
         // Somehow not working with clear() method
         basicTest.citiesPage.getNameInput().sendKeys(Keys.CONTROL, "A");
         basicTest.citiesPage.getNameInput().sendKeys(Keys.BACK_SPACE);
-        basicTest.citiesPage.getNameInput().sendKeys("Ilija Nestorovic's city Edited");
+        basicTest.citiesPage.getNameInput().sendKeys("Lazar Mitrovic's city Edited");
         basicTest.citiesPage.getSaveButton().click();
         wait.until(webDriver -> basicTest.messagePopUpPage.successDialog().isDisplayed());
         String actualResult = basicTest.messagePopUpPage.getTextFromUserError();
@@ -89,7 +89,7 @@ public class AdminCitiesTests {
     public void searchCity() {
         basicTest.navPage.getAdminButton().click();
         basicTest.navPage.getCitiesDropDownLink().click();
-        basicTest.citiesPage.getSearchInput().sendKeys("Ilija Nestorovic's city Edited");
+        basicTest.citiesPage.getSearchInput().sendKeys("Lazar Mitrovic's city Edited");
         basicTest.citiesPage.waitForNumberOfRows(1);
         String actualResult = basicTest.citiesPage.getTableCell(1, 2).getText();
         String expectedResult = basicTest.citiesPage.getSearchInput().getAttribute("value");

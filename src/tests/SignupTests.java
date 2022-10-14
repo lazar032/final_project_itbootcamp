@@ -28,7 +28,7 @@ public class SignupTests {
         basicTest.navPage.getSignUpButton().click();
         String actualResult = driver.getCurrentUrl();
         String expectedResult = "/signup";
-        Assert.assertTrue(actualResult.contains(expectedResult), "URL route should be '/signup'");
+        Assert.assertTrue(actualResult.contains(expectedResult), "URL route should be '/signup'!");
     }
 
     @Test(priority = 20)
@@ -38,7 +38,7 @@ public class SignupTests {
         String actualPasswordResult = basicTest.signupPage.getPasswordInput().getAttribute("type");
         String expectedEmailResult = "email";
         String expectedPasswordResult = "password";
-        Assert.assertEquals(actualEmailResult, expectedEmailResult, "Attribute 'type' should be 'email'");
+        Assert.assertEquals(actualEmailResult, expectedEmailResult, "Attribute 'type' should be 'email'!");
         Assert.assertEquals(actualPasswordResult, expectedPasswordResult, "Attribute 'type' should be 'password'");
     }
     @Test(priority = 30)
