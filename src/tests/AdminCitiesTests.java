@@ -64,7 +64,7 @@ public class AdminCitiesTests {
         wait.until(webDriver -> basicTest.messagePopUpPage.successDialog().isDisplayed());
         String actualResult = basicTest.messagePopUpPage.getTextFromUserError();
         String expectedResult = "Saved successfully";
-        Assert.assertTrue(actualResult.contains(expectedResult), "Popup should be 'Saved successfully'");
+        Assert.assertTrue(actualResult.contains(expectedResult), "Popup should be 'Saved successfully'.");
 
     }
 
@@ -83,7 +83,7 @@ public class AdminCitiesTests {
         wait.until(webDriver -> basicTest.messagePopUpPage.successDialog().isDisplayed());
         String actualResult = basicTest.messagePopUpPage.getTextFromUserError();
         String expectedResult = "Saved successfully";
-        Assert.assertTrue(actualResult.contains(expectedResult), "Error should be 'Saved successfully'");
+        Assert.assertTrue(actualResult.contains(expectedResult), "Error should be 'Saved successfully'!");
     }
     @Test(priority = 50)
     public void searchCity() {
@@ -93,7 +93,7 @@ public class AdminCitiesTests {
         basicTest.citiesPage.waitForNumberOfRows(1);
         String actualResult = basicTest.citiesPage.getTableCell(1, 2).getText();
         String expectedResult = basicTest.citiesPage.getSearchInput().getAttribute("value");
-        Assert.assertEquals(actualResult, expectedResult, "Name value should be equal to search value");
+        Assert.assertEquals(actualResult, expectedResult, "Name value should be equal to search value!");
     }
     @Test(priority = 60)
     public void deleteCity() {
@@ -110,7 +110,7 @@ public class AdminCitiesTests {
         wait.until(webDriver -> basicTest.messagePopUpPage.successDialog().isDisplayed());
         String actualTextResult = basicTest.messagePopUpPage.getTextFromUserError();
         String expectedTextResult = "Deleted successfully";
-        Assert.assertTrue(actualTextResult.contains(expectedTextResult), "Error should be 'Deleted successfully'");
+        Assert.assertTrue(actualTextResult.contains(expectedTextResult), "Error should be 'Deleted successfully'!");
 
     }
     @AfterMethod
